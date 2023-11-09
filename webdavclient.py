@@ -113,8 +113,8 @@ class WebDAVWrapper:
 # Example usage
 if __name__ == "__main__":
     webdav_url = "https://cernbox.cern.ch/remote.php/dav/public-files"
-    hash_value_read  = "zcvWnJKEk7YgSBh"  
-    hash_value_write = "p0Pmcx2KEcY7imd"
+    hash_value_read  = "XXXXXXXXXXXXXXX"  
+    hash_value_write = "XXXXXXXXXXXXXXX"
     remote_dir = "pippo"
     remote_path = "/pippo2.txt"
     local_path = "webdavclient.py"
