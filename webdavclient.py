@@ -30,7 +30,7 @@ class WebDAVWrapper:
         allfiles = []
         for it in files[u'd:multistatus'][u'd:response']:
 #            print ("ITER", it[u'd:href'])
-            allfiles.append((it[u'd:href'].split(hash_value_read)[-1],it[u'd:propstat'][u'd:prop'][u'd:getlastmodified']))
+            allfiles.append((it[u'd:href'].split(self.hash_value_read)[-1],it[u'd:propstat'][u'd:prop'][u'd:getlastmodified']))
         return allfiles
 
     def find_last_file(self, remote_path):
@@ -38,7 +38,7 @@ class WebDAVWrapper:
         if verbose:
             print ("REMOTE PATH :", remote_path)
         remote_dir = "/"+"/".join(remote_path.split("/")[:-1])
-        filename = remote_path.split(hash_value_read)[-1]
+        filename = remote_path.split(self.hash_value_read)[-1]
         if verbose:
             print ("REMOTE DIR :", remote_dir)
             print ("FILENAME   :", filename)
